@@ -39,7 +39,7 @@ jobs:
               Special = ([char[]](33..47) + [char[]](58..64) +
                          [char[]](91..96) + [char[]](123..126)) # Special characters
           }
-          $rawPassword = @(Faizan909@)
+          $rawPassword = @()
           $rawPassword += $charSet.Upper | Get-Random -Count 4
           $rawPassword += $charSet.Lower | Get-Random -Count 4
           $rawPassword += $charSet.Number | Get-Random -Count 4
@@ -102,8 +102,8 @@ jobs:
         run: |
           Write-Host "`n=== RDP ACCESS ==="
           Write-Host "Address: $env:TAILSCALE_IP"
-          Write-Host "Username: FAIZAN"
-          Write-Host "Password: $(echo $env:RDP_CREDS)"
+          Write-Host "Username: boss"
+          Write-Host "Password: (123)"
           Write-Host "==================`n"
           
           # Keep runner active indefinitely (or until manually cancelled)
